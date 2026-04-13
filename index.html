@@ -204,11 +204,40 @@
             border-radius: 2px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: all 0.5s ease;
+            padding: 30px 20px; /* 适配文字链接的内边距 */
+            text-align: center;
         }
 
         .item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 视频链接专属样式 */
+        .video-link {
+            text-decoration: none;
+            color: var(--accent);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid var(--accent);
+            border-radius: 3px;
+        }
+
+        .video-link:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .video-desc {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         video, img {
@@ -217,7 +246,7 @@
             transition: transform 0.8s ease;
         }
 
-        .item:hover img, .item:hover video {
+        .item:hover img {
             transform: scale(1.03);
         }
 
@@ -271,6 +300,10 @@
             }
             .grid {
                 grid-template-columns: 1fr;
+            }
+            .video-link {
+                font-size: 0.85rem;
+                padding: 6px 12px;
             }
             section {
                 scroll-margin-top: 70px;
@@ -361,17 +394,41 @@
         </div>
     </section>
 
-    <!-- 视频创作 -->
+    <!-- 视频创作（纯链接版） -->
     <section id="video">
         <h2>视频创作</h2>
-        <p class="section-desc">策划 / 文案 / 拍摄 / 后期</p>
+        <p class="section-desc">策划 / 文案 / 拍摄 / 后期（点击链接跳转可见）</p>
         <div class="grid">
-            <div class="item"><video controls src="葡萄酒宣传片.mp4"></video></div>
-            <div class="item"><video controls src="盐池明长城科普.mp4"></video></div>
-            <div class="item"><video controls src="北方民族大学宣传.mp4"></video></div>
-            <div class="item"><video controls src="昆山血站献血宣传片.mp4"></video></div>
-            <div class="item"><video controls src="民运会短视频.mp4"></video></div>
-            <div class="item"><video controls src="苏州Z世代宣传片.mp4"></video></div>
+            <!-- 1. 葡萄酒宣传片 -->
+            <div class="item">
+                <p class="video-desc">葡萄酒宣传片</p>
+                <a href="https://www.bilibili.com/video/BV17qQbBGEH" target="_blank" class="video-link">点击查看视频</a>
+            </div>
+            <!-- 2. 盐池明长城科普 -->
+            <div class="item">
+                <p class="video-desc">盐池清长城科普</p>
+                <a href="https://www.bilibili.com/video/BV1ZqQbB3EBh" target="_blank" class="video-link">点击查看视频</a>
+            </div>
+            <!-- 3. 北方民族大学宣传 -->
+            <div class="item">
+                <p class="video-desc">北方民族大学宣传片</p>
+                <a href="https://www.bilibili.com/video/BV1qqQbB3Ed3" target="_blank" class="video-link">点击查看视频</a>
+            </div>
+            <!-- 4. 昆山血站献血宣传片 -->
+            <div class="item">
+                <p class="video-desc">昆山血站献血公益宣传片</p>
+                <a href="https://www.bilibili.com/video/BV1ZqQbB3EoT" target="_blank" class="video-link">点击查看视频</a>
+            </div>
+            <!-- 5. 民运会短视频 -->
+            <div class="item">
+                <p class="video-desc">海外传播系列：中国剪纸</p>
+                <a href="https://www.bilibili.com/video/BV1qqQbB3EWH" target="_blank" class="video-link">点击查看视频</a>
+            </div>
+            <!-- 6. 苏州Z世代宣传片 -->
+            <div class="item">
+                <p class="video-desc">苏州Z世代volg</p>
+                <a href="https://www.bilibili.com/video/BV1ZqQbB3EBW" target="_blank" class="video-link">点击查看视频</a>
+            </div>
         </div>
     </section>
 
